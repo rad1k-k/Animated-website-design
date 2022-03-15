@@ -13,6 +13,8 @@
     padding-right: 5%;
     box-sizing: border-box;
     position: relative;
+
+    overflow: hidden;
 }
 
 .navbar {
@@ -26,16 +28,47 @@
 .logo {
     width: 160px;
     cursor: pointer;
+
+    animation: movedown 1s linear 1;
+    animation-delay: 1s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
 }
+
+@keyframes movedown {
+    0% {
+        transform: translateY(-100px);
+        visibility: visible;
+    }
+    100% {
+        transform: translateY(0);
+        visibility: visible;
+    }
+}
+
+
+
+
+
 
 .cart {
     width: 40px;
     cursor: pointer;
+
+    animation: movedown 1s linear 1;
+    animation-delay: 3s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
 }
 
 nav {
     flex: 1;
     padding-left: 60px;
+
+    animation: movedown 1s linear 1;
+    animation-delay: 2s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
 }
 
 nav ul li {
@@ -52,7 +85,27 @@ nav ul li a {
 .content {
     margin-left: 10%;
     margin-top: 10%;
+
+    animation: moveright 1s linear 1;
+    animation-delay: 4s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
 }
+
+
+@keyframes moveright {
+    0% {
+        transform: translateX(-100px);
+        visibility: visible;
+    }
+    100% {
+        transform: translateX(0);
+        visibility: visible;
+    }
+}
+
+
+
 
 .content h1 {
     font-size: 60px;
@@ -93,14 +146,52 @@ nav ul li a {
     position: absolute;
     bottom: 0;
     right: 160px;
+
+    animation: zoomin 1s linear 1;
+    animation-delay: 5s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
 }
+
+
+@keyframes zoomin {
+    0% {
+        transform: scale(0.5);
+        visibility: visible;
+    }
+    100% {
+        transform: scale(1);
+        visibility: visible;
+    }
+}
+
+
 
 .social-links {
     transform: rotate(-90deg);
     position: absolute;
     left: -80px;
     bottom: 180px;
+
+    animation: moveup 1s linear 1;
+    animation-delay: 6s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
 }
+
+
+@keyframes moveup {
+    0% {
+        transform: translateY(100px) rotate(-90deg);
+        visibility: visible;
+    }
+    100% {
+        transform: translateY(0) rotate(-90deg);
+        visibility: visible;
+    }
+}
+
+
 
 .social-links a {
     text-decoration: none;
